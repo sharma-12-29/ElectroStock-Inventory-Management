@@ -1,6 +1,6 @@
 const express = require("express");
 const {addCategory,getAllCategory,getOneCategory,updateCategory,deleteCategory} =require("../controllers/catergorycontroller")
-const loginMiddleware = require("../middleware/loginMiddleware");
+const loginMiddleware = require("../middleware/loginmiddleware");
 
 const router = express.Router();
 
