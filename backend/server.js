@@ -3,7 +3,7 @@
    const express= require("express")
    const cors = require("cors")
  const connectToDb = require("./src/config/db")
- const loginRoutes = require("./src/routes/loginRoutes");
+ const loginRoutes = require("./src/routes/loginroutes");
   const productRoutes = require("./src/routes/productroutes")
   const categoryRoutes = require("./src/routes/categoriesroutes");
   const supplierRoutes = require("./src/routes/suppliesroutes");
