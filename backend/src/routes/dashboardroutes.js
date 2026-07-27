@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const { getDashboardStats } = require("../controllers/dashboardController");
-const loginMiddleware = require("../middleware/loginMiddleware");
+const loginMiddleware = require("../middleware/loginmiddleware");
 
 router.get("/", loginMiddleware, getDashboardStats);
 
