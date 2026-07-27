@@ -1,0 +1,18 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "javascript": true,
+    "typescript": true,
+    "jsx": true,
+    "tsx": true
+  },
+  "chat.disableAIFeatures": false
+}

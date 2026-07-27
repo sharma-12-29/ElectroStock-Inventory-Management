@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 260px;
+    height: 100vh;
+    background: #0F172A;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 20px;
+    z-index: 9999;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+}
+
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:  50px;
+}
+.feature-content2{
+    margin-left: 10px;
+}
+.feature-content2 h2{
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #14B8A6;
+}
+
+.feature-content2 p{
+    margin-top: -6px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.top-bar h2{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.top-bar p{
+    font-size: 14px;
+    color: #94A3B8;
+}
+
+.sidebar ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar li{
+    margin-bottom: 12px;
+}
+
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    background: #14B8A6;
+}
+
+.sidebar a.active{
+    background: #14B8A6;
+    font-weight: 600;
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #1E293B;
+    border-radius: 15px;
+    text-align: center;
+}
+footer:hover{
+    background: #14B8A6;
+}
+
+.sidebar-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .sidebar-close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
