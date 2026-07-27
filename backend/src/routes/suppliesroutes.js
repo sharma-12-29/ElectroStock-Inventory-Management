@@ -6,7 +6,7 @@ const {
   getSingleSupplier,
   updateSupplier,
   deleteSupplier,
-} = require("../controllers/supplierController");
+} = require("../controllers/suppliercontroller");
 
 const loginMiddleware = require("../middleware/loginmiddleware");
 
