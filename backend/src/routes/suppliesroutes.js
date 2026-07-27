@@ -8,7 +8,7 @@ const {
   deleteSupplier,
 } = require("../controllers/supplierController");
 
-const loginMiddleware = require("../middleware/loginMiddleware");
+const loginMiddleware = require("../middleware/loginmiddleware");
 
 const router = express.Router();
 
