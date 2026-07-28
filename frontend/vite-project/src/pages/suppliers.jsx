@@ -54,7 +54,11 @@ const [formData, setFormData] = useState({
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
+<<<<<<< HEAD
       "https://electrostock-inventory-management.onrender.com/api/suppliers/all",
+=======
+         "https://electrostock-inventory-management.onrender.com/api/suppliers/all",
+>>>>>>> 13a7f8e4ad45aa91fc9598c2f63eb1e419c19269
       {
         headers:{
           Authorization:`Bearer ${token}`
@@ -82,7 +86,11 @@ const addSupplier = async()=>{
   if(editId){
 
     await axios.put(
+<<<<<<< HEAD
   `https://electrostock-inventory-management.onrender.com/api/suppliers/${editId}`,
+=======
+ `https://electrostock-inventory-management.onrender.com/api/suppliers/${editId}`,
+>>>>>>> 13a7f8e4ad45aa91fc9598c2f63eb1e419c19269
       formData,
       {
         headers:{
