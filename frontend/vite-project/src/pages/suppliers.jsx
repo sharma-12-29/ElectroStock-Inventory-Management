@@ -82,7 +82,7 @@ const addSupplier = async()=>{
   if(editId){
 
     await axios.put(
-      `http://localhost:3000/api/suppliers/${editId}`,
+  `https://electrostock-inventory-management.onrender.com/api/suppliers/${editId}`,
       formData,
       {
         headers:{
@@ -94,7 +94,7 @@ const addSupplier = async()=>{
   }else{
 
     await axios.post(
-      "http://localhost:3000/api/suppliers/add",
+  "https://electrostock-inventory-management.onrender.com/api/suppliers/all",
       formData,
       {
         headers:{
@@ -160,7 +160,7 @@ const deleteSupplier = async(id)=>{
 
 
  await axios.delete(
-  `http://localhost:3000/api/suppliers/${id}`,
+`https://electrostock-inventory-management.onrender.com/api/suppliers/${id}`,
   {
     headers:{
       Authorization:`Bearer ${token}`

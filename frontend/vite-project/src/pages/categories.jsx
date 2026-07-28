@@ -26,7 +26,7 @@ const getCategories = async () => {
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-        "https://electrostock-inventory-management.onrender.com/api/categories/all",
+  "https://electrostock-inventory-management.onrender.com/api/categories/all",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ const addCategory = async () => {
 
     if (editId) {
       await axios.put(
-        `http://localhost:3000/api/categories/${editId}`,
+     `https://electrostock-inventory-management.onrender.com/api/categories/${editId}`,
         formData,
         {
           headers: {
@@ -58,7 +58,7 @@ const addCategory = async () => {
       );
     } else {
       await axios.post(
-        "http://localhost:3000/api/categories/add",
+      "https://electrostock-inventory-management.onrender.com/api/categories/add",
         formData,
         {
           headers: {
@@ -109,7 +109,7 @@ const deleteCategory = async (id) => {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:3000/api/categories/${id}`,
+  `https://electrostock-inventory-management.onrender.com/api/categories/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
