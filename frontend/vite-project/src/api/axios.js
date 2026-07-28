@@ -1,9 +1,7 @@
 import axios from "axios";
-
 const api = axios.create({
   baseURL: "https://electrostock-inventory-management.onrender.com/api",
 });
-
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
 
