@@ -94,7 +94,7 @@ const addSupplier = async()=>{
   }else{
 
     await axios.post(
-      "http://localhost:3000/api/suppliers/add",
+  "https://electrostock-inventory-management.onrender.com/api/suppliers/all",
       formData,
       {
         headers:{
