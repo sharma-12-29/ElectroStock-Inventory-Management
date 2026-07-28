@@ -8,31 +8,32 @@ import './login.css'
 
 const Login = () => {
   const navigate = useNavigate();
-
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("admin");
+  const [loading, setLoading] = useState(false);
 
-    const handleLogin = async (e) => {
-    e.preventDefault();
+  const handleLogin = async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await api.post("/login/login", {
-        email,
-        password,
-        role,
-      });
+  try {
+    const res = await api.post("/login/login", {
+      email,
+      password,
+      role,
+    });
 
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
+    localStorage.setItem("token", res.data.token);
+    localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate("/dashboard");
-    } catch(error){
-  console.log("FULL ERROR:", error);
-  console.log("RESPONSE:", error.response);
+    navigate("/dashboard");
+
+  } catch(error){
+    console.log("FULL ERROR:", error);
+    console.log("RESPONSE:", error.response);
     alert(error.response?.data?.message || "Login failed");
-}
-  };
+  }
+};
   return (
     <div>
       <main className="main">
@@ -143,7 +144,7 @@ const Login = () => {
   </div>
 
   <button type="submit" className="login-button">
-    Sign In
+    {loading ? "Signing in..." : "Sign In"}
     <MoveRight size={20} style={{marginLeft: '10px'}} />
   </button>
 
