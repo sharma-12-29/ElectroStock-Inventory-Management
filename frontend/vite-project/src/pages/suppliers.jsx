@@ -54,7 +54,7 @@ const [formData, setFormData] = useState({
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-      "http://localhost:3000/api/suppliers/all",
+      "https://electrostock-inventory-management.onrender.com/api/suppliers/all",
       {
         headers:{
           Authorization:`Bearer ${token}`

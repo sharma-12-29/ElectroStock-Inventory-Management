@@ -26,7 +26,7 @@ const getCategories = async () => {
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-      "http://localhost:3000/api/categories/all",
+        "https://electrostock-inventory-management.onrender.com/api/categories/all",
       {
         headers: {
           Authorization: `Bearer ${token}`,
